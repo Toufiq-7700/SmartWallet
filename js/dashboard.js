@@ -8,8 +8,8 @@ Chart.defaults.font.family = "'Roboto', sans-serif";
 const lineCtx = document.getElementById('lineChart').getContext('2d');
 
 let lineGradient = lineCtx.createLinearGradient(0, 0, 0, 400);
-lineGradient.addColorStop(0, 'rgba(56, 189, 248, 0.5)'); // primary-accent
-lineGradient.addColorStop(1, 'rgba(56, 189, 248, 0.0)');
+lineGradient.addColorStop(0, 'rgba(0, 242, 254, 0.5)'); // primary-accent
+lineGradient.addColorStop(1, 'rgba(0, 242, 254, 0.0)');
 
 // Format dates nicely
 const formattedDates = chartDates.map(dateStr => {
@@ -24,13 +24,13 @@ new Chart(lineCtx, {
         datasets: [{
             label: 'Amount Spent',
             data: chartAmounts.length > 0 ? chartAmounts : [0],
-            borderColor: '#38bdf8', // primary-accent
+            borderColor: '#00f2fe', // primary-accent
             backgroundColor: lineGradient,
             borderWidth: 3,
             fill: true,
             tension: 0.4, // Smooth curve
             pointBackgroundColor: '#fff',
-            pointBorderColor: '#38bdf8',
+            pointBorderColor: '#00f2fe',
             pointBorderWidth: 2,
             pointRadius: 4,
             pointHoverRadius: 6
@@ -84,10 +84,10 @@ const pieCtx = document.getElementById('pieChart').getContext('2d');
 
 // Beautiful Palette for Pie Chart
 const palette = [
-    '#38bdf8', // light blue
-    '#c084fc', // purple
-    '#fb7185', // rose
-    '#34d399', // emerald
+    '#00f2fe', // cyan/teal
+    '#9b51e0', // purple
+    '#ff4757', // rose/danger
+    '#2ed573', // emerald/success
     '#facc15', // yellow
     '#f472b6'  // pink
 ];

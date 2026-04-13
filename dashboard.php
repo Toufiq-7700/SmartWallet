@@ -85,6 +85,18 @@ while ($row = mysqli_fetch_assoc($cats_result)) {
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
 
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="float-icon">🪙</div>
+        <div class="float-icon">💎</div>
+        <div class="float-icon">💸</div>
+        <div class="float-icon">📈</div>
+        <div class="float-icon">💰</div>
+        <div class="float-icon">💳</div>
+        <div class="float-icon">✨</div>
+        <div class="float-icon">🏦</div>
+    </div>
+
     <div class="app-container">
         
         <!-- Sidebar -->
@@ -128,9 +140,12 @@ while ($row = mysqli_fetch_assoc($cats_result)) {
             <!-- Dashboard Body -->
             <div class="dashboard-container">
                 
-                <div class="header-actions">
+                <div class="header-actions" style="display: flex; gap: 15px; justify-content: flex-end;">
+                    <a href="add_income.php" class="btn-success">
+                        <i class="fa-solid fa-plus"></i> Add Money
+                    </a>
                     <a href="add_expense.php" class="btn-primary">
-                        <i class="fa-solid fa-plus"></i> Add New Expense
+                        <i class="fa-solid fa-plus"></i> Add Expense
                     </a>
                 </div>
 

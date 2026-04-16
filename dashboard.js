@@ -1,4 +1,4 @@
-// js/dashboard.js
+// dashboard.js
 
 // Setup Chart Colors and Styles for Glassmorphism Look
 Chart.defaults.color = "rgba(255, 255, 255, 0.7)";

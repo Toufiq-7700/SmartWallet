@@ -16,8 +16,8 @@ if (isset($_SESSION['user_id'])) {
     <title>SmartWallet | Master Your Wealth</title>
     <!-- Add Google Fonts and FontAwesome from style.css imports or directly here -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
     <!-- Animated Interactive Background -->

@@ -545,10 +545,251 @@ tbody tr:hover {
   color: var(--danger-color);
 }
 
-/* Responsive */
+/* ================================ */
+/* Monthly Tracking Page            */
+/* ================================ */
+
+.monthly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.monthly-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.monthly-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.monthly-heading i {
+  color: var(--primary-accent);
+  font-size: 1.3rem;
+}
+
+.monthly-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.year-selector select {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+
+.year-selector select option {
+  background: #0f172a;
+  color: var(--text-primary);
+}
+
+.year-nav-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.year-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-accent);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.15);
+}
+
+/* Card sublabel */
+.card-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  letter-spacing: 0.3px;
+}
+
+/* Monthly chart card */
+.monthly-chart-card {
+  padding: 1.8rem;
+}
+
+/* Year badge in table header */
+.monthly-year-badge {
+  background: linear-gradient(135deg, rgba(155, 81, 224, 0.2), rgba(0, 242, 254, 0.2));
+  border: 1px solid rgba(155, 81, 224, 0.3);
+  color: var(--primary-accent);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Month cell with icon */
+.month-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.month-icon {
+  font-size: 1.2rem;
+}
+
+/* Transaction count badge */
+.transaction-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Percentage bar (% of Year column) */
+.pct-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+}
+
+.pct-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 0;
+  flex-shrink: 0;
+  max-width: 80px;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+.pct-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Trend badges */
+.trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.trend-badge.trend-up {
+  background: rgba(255, 71, 87, 0.12);
+  color: var(--danger-color);
+  border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
+.trend-badge.trend-down {
+  background: rgba(46, 213, 115, 0.12);
+  color: var(--success-color);
+  border: 1px solid rgba(46, 213, 115, 0.2);
+}
+
+.trend-badge.trend-neutral {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trend-badge i {
+  font-size: 0.65rem;
+}
+
+/* Totals row */
+.totals-row {
+  border-top: 2px solid rgba(155, 81, 224, 0.3) !important;
+  background: rgba(155, 81, 224, 0.05) !important;
+}
+
+.totals-row td {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  color: var(--text-primary);
+}
+
+/* Monthly table section overrides */
+.monthly-table-section .table-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.monthly-table-section .table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.monthly-table-section .table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.monthly-table-section .table-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+}
+
+/* ================================ */
+/* Responsive                       */
+/* ================================ */
+
 @media (max-width: 1024px) {
   .charts-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .monthly-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -580,5 +821,17 @@ tbody tr:hover {
   
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .pct-bar-container {
+    min-width: 100px;
+  }
+  
+  .pct-bar {
+    max-width: 50px;
+  }
+  
+  .monthly-table-section table {
+    min-width: 700px;
   }
 }

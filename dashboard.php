@@ -109,7 +109,7 @@ while ($row = mysqli_fetch_assoc($cats_result)) {
                 <li><a href="dashboard.php" class="active"><i class="fa-solid fa-border-all"></i> <span>Dashboard</span></a></li>
                 <li><a href="expenses.php"><i class="fa-solid fa-receipt"></i> <span>Transactions</span></a></li>
                 <li><a href="budget.php"><i class="fa-solid fa-piggy-bank"></i> <span>Budget</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-chart-pie"></i> <span>Reports</span></a></li>
+                <li><a href="monthly.php"><i class="fa-solid fa-calendar-days"></i> <span>Monthly</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-gear"></i> <span>Settings</span></a></li>
             </ul>
             <div class="sidebar-logout">
